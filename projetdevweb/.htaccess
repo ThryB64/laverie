@@ -1,0 +1,18 @@
+# Enable CORS
+Header set Access-Control-Allow-Origin "*"
+
+# Enable rewriting
+RewriteEngine On
+
+# Redirect to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Handle font files
+<FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+# PHP error handling
+php_flag display_errors on
+php_value error_reporting E_ALL 
