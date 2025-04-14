@@ -51,6 +51,11 @@ Les données de test sont insérées dans `database.sql` :
 - Produits de lavage avec stock
 - Réservations simulées sur plusieurs jours
 
+MOT DE PASSE:
+
+ADMIN : user : baron password : baron123
+CHIFFON RECRUE : user : chiffon password : chiffon123
+
 ## ✅ Pour démarrer le projet
 
 1. Importer la base `laverie` dans MySQL à partir de `database.sql` avec la commande  : mysql -u root -p < database.sql
